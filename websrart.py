@@ -189,27 +189,39 @@
        git remote add origin https://github.com/parkyongdeok/my-first-blog.git
        git push -u origin master #usenjoy@naver.com,  park~
 
+        echo "# my-first-blog" >> README.md
+        git init
+        git add README.md
+        git commit -m "first commit"
+        git remote add origin https://github.com/parkyongdeok/my-first-blog.git
+        git push -u origin master
+
    4. GitHub에서 PythonAnyWhere로 코드 가져오기
+      #PythonAnyWhere(https://www.pythonanywhere.com) 사이트에서 실행
+      #$bsh에서 실행
       #git clone https://github.com/bander/my-first-blog.git
       Site에서 bsh로 실행 #https://www.pythonanywhere.com 로그인후
       git clone https://github.com/parkyongdeok/my-first-blog.git
       tree my-first-blog
 
       #PythonAnywhere에서 가상환경(virtualenv) 생성하기
-      cd my-first-blog
-      virtualenv --python=python3.6 myvenv
-      source myvenv/bin/activate
+      ~ $ cd my-first-blog
+      ~/my-first-blog (master)$ virtualenv --python=python3.6 myvenv
+      ~/my-first-blog (master)$ source myvenv/bin/activate
 
       #PythonAnywhere에서 가상환경(virtualenv) 생성하기
       배시 콘솔(Bash console)에 다음과 같이 입력하세요. :
       $ cd my-first-blog
       $ virtualenv --python=python3.6 myvenv
       $ source myvenv/bin/activate
-      (myvenv) $  pip install django~=1.11.0
+      # Django 설치 (시간걸림-5분)
+      (myvenv) ~/my-first-blog (master)$ pip install django~=1.11.0
+
 
       #PythonAnywhere에서 데이터베이스 생성하기
       (mvenv) $ python manage.py migrate
       (mvenv) $ python manage.py createsuperuser
+      userId:usenjoy, usenjoy@naver.com, P@~~
 
       #web app으로 블로그 배포하기
       domain bander.pythonanywhere.com.
@@ -221,4 +233,7 @@
       web -> Virtualenv: name 등록
       /home/bander/my-first-blog/myvenv -> 저장
 
-      #WSGI 파일 설정하기
+      #www. WSGI 파일 설정하기
+
+     #장고 쉘실행
+     (myvenv) ~/djangogirls$ python manage.py shell
