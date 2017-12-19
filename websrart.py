@@ -153,6 +153,8 @@
        윈도우 커맨드라인에서 Git과 유닉스 도구를 사용
        (Use Git and optional Unix tools from the Windows Command Prompt)을 선택하세요
 
+     Command 창 다시 실행
+
    2. git 저장소 만들기
      git init  # C:\Python\djangogirls 에서 실행
        .gitignore 생성
@@ -172,6 +174,8 @@
      git status #상태파악
      git add --all . #전체저장
      git commit -m "My Django Girls app, first commit"
+
+     #github으로 업로드(푸쉬) 하세요.
 
 
 
